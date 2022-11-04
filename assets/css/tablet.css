@@ -1,0 +1,68 @@
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "sectionTop"
+        "article"
+        "aside"
+        "sectionBot";
+}
+
+#section_top {
+    grid-area: sectionTop;
+}
+
+#section_hebergement {
+    grid-area: article;
+}
+
+#aside_populaire {
+    grid-area: aside;
+}
+
+#section_activites {
+    grid-area: sectionBot;
+}
+
+/*  ---------------   MODIFICATIONS FILTRES   ---------------  */
+
+
+.filters_container>ul {
+    gap: 10px 2%;
+}
+
+/*  ---------------   MODIFICATIONS ZONE LES PLUS POPULAIRES   ---------------  */
+.aside_populaire {
+    margin: 39px 40px 0 0;
+}
+
+.aside_populaire .hotel-cartes {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 23px;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.hotel-info h3 {
+    font-size: 14px;
+}
+
+/*  ---------------------------------   SECTION ACTIVITEES   ---------------------------------  */
+.section_cards_wrapper {
+    width: 100%;
+    padding: 34px 40px 69px 0;
+}
+
+
+/*  -------   SECTION ACTIVITEES > CARDS > IMG  -------  */
+.section_activites_card_wrapper>img {
+    height: 211px;
+}
+
+/*  ---------------------------------   FOOTER   ---------------------------------  */
+footer {
+    margin-right: 40px;
+}
+
+.footer_wrapper {
+    gap: 0 10%;
+}
