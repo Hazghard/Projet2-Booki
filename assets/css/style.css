@@ -18,9 +18,12 @@
 body {
   max-width: 1400px;
   font-family: "Raleway", sans-serif;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 55px;
+  /* margin-left: auto;
+  margin-right: auto; */
+  /* padding-left: 55px; */
+  /* CORRECTIF SUITE A SOUTENANCE */
+  padding: 0px 50px 0px 50px;
+  margin: auto;
 }
 
 /*  ---------------------------------   HEADER   ---------------------------------  */
@@ -369,7 +372,6 @@ h2 {
 }
 
 .aside_populaire h2 {
-  padding-bottom: 23px;
   font-style: normal;
   font-weight: 700;
   font-size: 22px;
@@ -382,7 +384,7 @@ h2 {
   font-weight: 700;
   font-size: 16px;
   line-height: 19px;
-  padding: 4px 0px 9px 0;
+  padding: 0px 0px 9px 0;
   color: var(--textfond-clair-color);
 }
 
@@ -424,8 +426,11 @@ h2 {
 .aside_populaire .hotel-info {
   flex: 2;
   display: flex;
+  position: relative;
+  /* necessaire pour le placement des étoile */
   flex-direction: column;
-  justify-content: space-between;
+  /* CORRECTIF SUITE A SOUTENANCE */
+  /* justify-content: space-between; */
   padding: 12px 25px 12px 10px;
   font-size: 0.85em;
 }
@@ -438,6 +443,17 @@ h2 {
 
 .aside_populaire a h3 {
   color: black;
+}
+
+.aside_populaire .hotel-info p {
+  white-space: nowrap;
+}
+
+/* CORRECTIF SUITE A SOUTENANCE */
+/* Rajout pour le placement des étoiles */
+.aside_populaire a span {
+  position: absolute;
+  bottom: 5px;
 }
 
 .aside_populaire a:hover,
@@ -453,8 +469,22 @@ h2 {
   transform: translateY(-10px);
 }
 
-.aside_populaire h2 i {
-  float: right;
+.populaire__description__wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding-bottom: 23px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.titre-section {
+  position: relative;
+  white-space: nowrap;
+}
+
+.populaire__description__wrapper i {
+  font-size: 18px;
   color: var(--main-bg-color);
 }
 
